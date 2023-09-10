@@ -20,7 +20,7 @@ para criar uma aplicação no discord siga os seguintes passos:
 4. Clique em ```Add Bot```.
 5. Agora você pode trocar o nome, icone e descrição de seu bot de como desejar.
 
-### Invitando o BOT para um servidor
+### Convidando o BOT para um servidor
 
 Agora, vamos adicionar o bot a alguns servidores. Vá para a aba ```OAuth2``` no painel esquerdo e selecione ```bot``` e ```applications.commands``` como escopos.
 
