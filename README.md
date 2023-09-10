@@ -9,4 +9,4 @@ para instalar o pycord em sua máquina abra o seu terminal e digite o seguinte c
 
 ### Criando uma aplicação BOT para o discord
 para criar uma aplicação no discord siga os seguintes passos:
-1. Vá para o [Discord Developer Portal]([url](https://discord.com/developers/applications)https://discord.com/developers/applications) e clique em ```new application```
+1. Vá para o [Discord Developer Portal](https://discord.com/developers/applications) e clique em ```New application```
