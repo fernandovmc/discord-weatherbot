@@ -1,9 +1,7 @@
 # WeaterBOT discord
 Sistema para visualizar o clima e temperatura de uma cidade integrado em um BOT para o Discord.
 
-<p align="center">
-    <img src="https://media.discordapp.net/attachments/1150272954005979156/1150576635683291188/Captura_de_tela_de_2023-09-10_18-20-48.png?width=350&height=678" alt="Exemplo do BOT funcionando">
-</p>
+![](https://cdn.discordapp.com/attachments/1150272954005979156/1150579030899302480/screenshot_weatherbot.png)
 
 # Como rodar o bot localmente:
 
