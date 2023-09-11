@@ -5,7 +5,7 @@ Sistema para visualizar o clima e temperatura de um local integrado em um BOT pa
 
 # Como rodar o bot localmente:
 
-## Instalando o pycord
+### Instalando o pycord
 para instalar o pycord em sua máquina abra o seu terminal e digite o seguinte comando
 ```pip install py-cord```.
 
