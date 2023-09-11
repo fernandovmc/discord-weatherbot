@@ -4,8 +4,10 @@ import os
 import discord
 from discord.ext import commands
 
-dotenv.load_dotenv("key.env")
+dotenv.load_dotenv("api.env")
+dotenv.load_dotenv("token.env")
 token = str(os.getenv("TOKEN"))
+api_key = str(os.getenv("api_key"))
 
 weatherbot = discord.Bot()
 
@@ -34,7 +36,6 @@ async def tempo(ctx, arg):
     embedTornado = discord.Embed(title="Clima BOT")
     embedTornado.set_image(url="https://cdn.discordapp.com/attachments/1150272954005979156/1150551811741188186/tornado.png")
 
-    api_key = "6cf170affad7200cafd1f64ff197eff5"
     dicionario = {
         "Clear": "Limpo",
         "Rain": "Chuvoso",
