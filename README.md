@@ -45,10 +45,12 @@ Para usar o token do seu BOT você precisa:
 ### Passos Finais
 
 Para rodar o BOT, você vai precisar baixar os arquivos deste repositório e editar algumas linhas de código.
+1. Abra a pasta com o vscode e abra o arquivo main.py
 
 ![](https://media.discordapp.net/attachments/1150272954005979156/1150586332717006858/image.png)
 
-Para isso, substitua essa parte do código com o seguinte código:
+2. Você vai precisar substituir essa parte do codigo na imagem acima por essas linhas de código:
+
 ```
 import requests
 import discord
@@ -56,3 +58,5 @@ from discord.ext import commands
 
 token = ("TOKEN")
 ```
+3. Depois de substituído, seu BOT deverá estar funcionando. Aperte ```CTRL+F5``` no seu vscode para rodar o BOT.
+4. Por fim adicione o BOT em um servidor ou mande uma mensagem direta para ele pelo Discord com o comando ```/tempo {nome do lugar}```
