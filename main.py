@@ -14,6 +14,9 @@ weatherbot = discord.Bot()
 async def on_ready():
     print(f"{weatherbot.user} Está ligado!")
 
+async def handleWeather(ctx, weather, arg, celsius, embed):
+    await ctx.respond(f"O clima em **{arg}** é: **{weather}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embed)
+
 @weatherbot.slash_command(name = "tempo", description="Veja a temperatura e o clima de uma cidade.")
 async def tempo(ctx, arg):
     embedClouds = discord.Embed(title="Clima BOT")
@@ -62,16 +65,16 @@ async def tempo(ctx, arg):
         celsius = ((temp - 32) / 1.8)
     
     if weather == "Clouds":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedClouds)
+        await handleWeather(ctx, dicionario[weather], arg, celsius, embedClouds)
     elif weather == "Clear":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedClear)
-    elif weather == "Rain" or weather == "Drizzle" or weather == "Thunderstorm" or weather == "Squall":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedRain)
+        await handleWeather(ctx, dicionario[weather], arg, celsius, embedClear)
+    elif weather in ["Rain", "Drizzle", "Thunderstorm", "Squall"]:
+        await handleWeather(ctx, dicionario[weather], arg, celsius, embedRain)
     elif weather == "Snow":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedSnow)
+        await handleWeather(ctx, dicionario[weather], arg, celsius, embedSnow)
     elif weather == "Tornado":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedTornado)
+        await handleWeather(ctx, dicionario[weather], arg, celsius, embedTornado)
     else:
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedFog)
+        await handleWeather(ctx, dicionario[weather], arg, celsius, embedFog)
 
 weatherbot.run(token)
