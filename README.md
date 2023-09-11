@@ -62,7 +62,7 @@ import requests
 import discord
 from discord.ext import commands
 
-token = ("TOKEN")
+token = ("cole aqui o seu token")
 ```
 3. Depois de substituído, seu BOT deverá estar funcionando. Aperte ```CTRL+F5``` no seu vscode para rodar o BOT.
 4. Por fim adicione o BOT em um servidor ou mande uma mensagem direta para ele pelo Discord com o comando ```/tempo {cidade}```
