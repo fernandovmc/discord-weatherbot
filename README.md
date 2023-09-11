@@ -59,4 +59,10 @@ from discord.ext import commands
 token = ("TOKEN")
 ```
 3. Depois de substituído, seu BOT deverá estar funcionando. Aperte ```CTRL+F5``` no seu vscode para rodar o BOT.
-4. Por fim adicione o BOT em um servidor ou mande uma mensagem direta para ele pelo Discord com o comando ```/tempo {nome do lugar}```
+4. Por fim adicione o BOT em um servidor ou mande uma mensagem direta para ele pelo Discord com o comando ```/tempo {cidade}```
+
+![](https://cdn.discordapp.com/attachments/1150272954005979156/1150588427436302366/teste.png)
+
+### Problemas e Dúvidas
+
+Para qualquer problema ou dúvida que surgir em relação à utilização do pycord recomendo entrar na [Documentação do Pycord](https://docs.pycord.dev/en/stable/index.html) na qual foi retirado e traduzido uma parte de seu guia detalhado sobre o funcionamento da biblioteca.
