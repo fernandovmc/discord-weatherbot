@@ -4,7 +4,7 @@ Sistema para visualizar o clima e temperatura de um local integrado em um BOT pa
 ![](https://cdn.discordapp.com/attachments/1150272954005979156/1150579030899302480/screenshot_weatherbot.png)
 
 # Como usar o BOT em seu servidor de discord
-## Clique [aqui](https://discord.com/api/oauth2/authorize?client_id=1150218107529469962&permissions=51200&scope=applications.commands%20bot
+Clique [aqui](https://discord.com/api/oauth2/authorize?client_id=1150218107529469962&permissions=51200&scope=applications.commands%20bot
 ) e autorize o BOT em um servidor de sua escolha!
 
 # Como rodar o bot localmente:
