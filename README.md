@@ -65,4 +65,4 @@ token = ("TOKEN")
 
 ### Problemas e Dúvidas
 
-Para qualquer problema ou dúvida que surgir em relação à utilização do pycord recomendo entrar na [Documentação do Pycord](https://docs.pycord.dev/en/stable/index.html) na qual foi retirado e traduzido uma parte de seu guia detalhado sobre o funcionamento da biblioteca.
+Para qualquer problema ou dúvida que surgir em relação à utilização do pycord, recomendo entrar na [Documentação do Pycord](https://docs.pycord.dev/en/stable/index.html) na qual foi retirado e traduzido uma parte de seu guia detalhado sobre o funcionamento da biblioteca.
