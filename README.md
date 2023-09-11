@@ -5,11 +5,11 @@ Sistema para visualizar o clima e temperatura de um local integrado em um BOT pa
 
 # Como rodar o bot localmente:
 
-### Instalando o pycord
+# Instalando o pycord
 para instalar o pycord em sua máquina abra o seu terminal e digite o seguinte comando
 ```pip install py-cord```.
 
-### Criando uma aplicação BOT para o discord
+# Criando uma aplicação BOT para o discord
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MjPk-Yu4sOq8KGrr_yG%2F-MjdW3OQnwUhacopqSWw%2F-Mjd_-mxrJCrzmaXrAg8%2Fimage.png?alt=media&token=b8e2ae6c-2290-4d37-ad7c-eb412f3fb00e)
 
@@ -20,7 +20,7 @@ para criar uma aplicação no discord siga os seguintes passos:
 4. Clique em ```Add Bot```.
 5. Agora você pode trocar o nome, icone e descrição de seu bot de como desejar.
 
-### Convidando o BOT para um servidor
+# Convidando o BOT para um servidor
 
 Agora, vamos adicionar o bot a alguns servidores. Vá para a aba ```OAuth2``` no painel esquerdo e selecione ```bot``` e ```applications.commands``` como escopos.
 
@@ -32,7 +32,7 @@ Em seguida, você deseja escolher quais permissões o bot terá e selecioná-las
 
 Você pode agora usar este link gerado para convidar o seu bot em algum servidor.
 
-### Tokens
+# Tokens
 
 Agora que você tem uma aplicação para seu BOT, você precisa logar, para logar, precisamos da senha do BOT. Todos os "users" e BOTs têm um ```Token```. Um token é como uma senha, que permite logar o BOT no Discord.
 Para usar o token do seu BOT você precisa:
@@ -42,7 +42,7 @@ Para usar o token do seu BOT você precisa:
 
 ![](https://gblobscdn.gitbook.com/assets%2F-MjPk-Yu4sOq8KGrr_yG%2F-MjdbU12JISJorAZxrKH%2F-MjdbpUsapzb5n15Po5P%2Fimage.png?alt=media&token=118e259f-940a-4f6c-b3a3-c29f3a54100d)
 
-### Passos Finais
+# Passos Finais
 
 Para rodar o BOT, você vai precisar baixar os arquivos deste repositório e editar algumas linhas de código.
 1. Abra a pasta com o vscode e abra o arquivo main.py
@@ -63,6 +63,6 @@ token = ("TOKEN")
 
 ![](https://cdn.discordapp.com/attachments/1150272954005979156/1150588427436302366/teste.png)
 
-### Problemas e Dúvidas
+# Problemas e Dúvidas
 
 Para qualquer problema ou dúvida que surgir em relação à utilização do pycord, recomendo entrar na [Documentação do Pycord](https://docs.pycord.dev/en/stable/index.html) na qual foi retirado e traduzido uma parte de seu guia detalhado sobre o funcionamento da biblioteca.
