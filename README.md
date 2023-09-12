@@ -1,4 +1,4 @@
-# WeaterBOT discord
+# WeatherBOT discord
 Sistema para visualizar o clima e temperatura de um local integrado em um BOT para o Discord.
 
 ![](https://cdn.discordapp.com/attachments/1150272954005979156/1150579030899302480/screenshot_weatherbot.png)
