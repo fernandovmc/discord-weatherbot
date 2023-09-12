@@ -3,6 +3,7 @@ import dotenv
 import os
 import discord
 from discord.ext import commands
+import pycountry
 
 dotenv.load_dotenv("api.env")
 dotenv.load_dotenv("token.env")
@@ -36,7 +37,7 @@ async def tempo(ctx, arg):
     embedTornado = discord.Embed(title="Clima BOT")
     embedTornado.set_image(url="https://cdn.discordapp.com/attachments/1150272954005979156/1150551811741188186/tornado.png")
 
-    dicionario = {
+    weatherList = {
         "Clear": "Limpo",
         "Rain": "Chuvoso",
         "Clouds": "Nuvens",
@@ -58,21 +59,25 @@ async def tempo(ctx, arg):
     if weather_data.json()['cod'] == '404': 
         await ctx.respond(f"Nenhuma cidade com esse nome encontrada. Tente novamente com outro nome")
     else:
+        cityName = weather_data.json()['name']
+        country = weather_data.json()['sys']['country']
         weather = weather_data.json()['weather'][0]['main']
+        weatherDesc = weather_data.json()['weather'][0]['description']
         temp = round(weather_data.json()['main']['temp'])
         celsius = ((temp - 32) / 1.8)
+        countryconvert = pycountry.countries.get(alpha_2=(country))
     
     if weather == "Clouds":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedClouds)
+        await ctx.respond(f"**{cityName}, {countryconvert.name}.** \n O clima em **{cityName}** é: **{weatherList[weather]}, {weatherDesc}** \nA temperatura em **{cityName}** é de: **{round(celsius, 1)}°C**", embed = embedClouds)
     elif weather == "Clear":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedClear)
+        await ctx.respond(f"**{cityName}, {countryconvert.name}.** \n O clima em **{cityName}** é: **{weatherList[weather]}, {weatherDesc}** \nA temperatura em **{cityName}** é de: **{round(celsius, 1)}°C**", embed = embedClear)
     elif weather == "Rain" or weather == "Drizzle" or weather == "Thunderstorm" or weather == "Squall":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedRain)
+        await ctx.respond(f"**{cityName}, {countryconvert.name}.** \n O clima em **{cityName}** é: **{weatherList[weather]}, {weatherDesc}** \nA temperatura em **{cityName}** é de: **{round(celsius, 1)}°C**", embed = embedRain)
     elif weather == "Snow":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedSnow)
+        await ctx.respond(f"**{cityName}, {countryconvert.name}.** \n O clima em **{cityName}** é: **{weatherList[weather]}, {weatherDesc}** \nA temperatura em **{cityName}** é de: **{round(celsius, 1)}°C**", embed = embedSnow)
     elif weather == "Tornado":
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedTornado)
+        await ctx.respond(f"**{cityName}, {countryconvert.name}.** \n O clima em **{cityName}** é: **{weatherList[weather]}, {weatherDesc}** \nA temperatura em **{cityName}** é de: **{round(celsius, 1)}°C**", embed = embedTornado)
     else:
-        await ctx.respond(f"O clima em **{arg}** é: **{dicionario[weather]}** \nA temperatura em **{arg}** é de: **{round(celsius, 1)}°C**", embed = embedFog)
+        await ctx.respond(f"**{cityName}, {countryconvert.name}.** \n O clima em **{cityName}** é: **{weatherList[weather]}, {weatherDesc}** \nA temperatura em **{cityName}** é de: **{round(celsius, 1)}°C**", embed = embedFog)
 
 weatherbot.run(token)
